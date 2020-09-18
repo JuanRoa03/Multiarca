@@ -1,14 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './Assets/Images/logo.svg';
+import './Assets/css/App.css';
+import firebase  from "./utils/firebase";
+import "firebase/auth"
 
 function App() {
+
+  firebase.auth().onAuthStateChanged(user => {
+    console.log(user)
+  })
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/Components/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
