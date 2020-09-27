@@ -1,19 +1,19 @@
 import React from 'react';
 import './Assets/css/App.css';
-import firebase  from "./utils/firebase";
 import "firebase/auth"
-import Auth from './Components/Auth';
+//import Auth from './Components/Auth'; // componente Auth para el registro de un nuevo usuario
+import Auth2 from './Components/Auth2'; // componente Auth para el inicio de sesion
+import {useUser} from 'reactfire';
 
 function App() {
 
-  firebase.auth().onAuthStateChanged(user => {
-    console.log(user)
-  })
+  const user=useUser();
 
   return (
     <div className="App">
-      <p>Registro:</p>
-      <Auth />
+      {user && <p>Usuario: {user.email}</p>}
+      <Auth2 /> {/* LLamado del jsx que contiene el inicio de sesion*/}
+      {/*<Auth />*/} {/* LLamado del jsx que contiene el formulario de registro*/}
     </div>
   );
 }
