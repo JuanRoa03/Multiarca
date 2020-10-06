@@ -3,16 +3,45 @@ import ReactDOM from 'react-dom';
 import './Assets/css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import './includes/bootstrap'
+import './includes/bootstrap';
 import {
   FirebaseAppProvider
-} from 'reactfire'
-import firebaseConfig from './utils/firebase'
+} from 'reactfire';
+import firebaseConfig from './utils/firebase';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+   
+} from "react-router-dom";
+
+import Auth from './Components/Auth';
+import Auth2 from './Components/Auth2';
 
 ReactDOM.render(
   <FirebaseAppProvider firebaseConfig ={firebaseConfig}>
+    
     <Suspense fallback={'Conectando con firebase'}>
     <React.StrictMode >
+    <Router>
+      <div>
+        <Switch>
+      <Route path="/" exact component={App}/>
+      
+     
+     <Route path="/Registro" component={Auth}/ >
+     
+     
+     
+     <Route path="/Login" component={Auth2}/  >
+     </Switch>
+     
+     
+
+      </div>
+
+     
+     </Router>
        
        <App />
      </React.StrictMode>
