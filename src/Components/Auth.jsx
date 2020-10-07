@@ -19,7 +19,7 @@ export default (props) => {
 
     return(
         <div>
-            <div>
+            <div className="jumbotron mt-2 " >
                 <label htmlFor="email"> Correo electronico</label>
                 <input type="email" id ="email" onChange={ (ev)=> setEmail(ev.target.value)} />
 
