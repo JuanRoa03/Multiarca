@@ -1,17 +1,12 @@
-import Auth2 from './Components/Auth2'; // componente Auth para el inicio de sesion
-import {useUser} from 'reactfire';
+import React, { Component } from 'react';
+import Auth2 from './Auth2'; // componente Auth para el inicio de sesion
 
-function App() {
-
-  const user=useUser();
-
-  return (
-    <div className="App">
-      {user && <p>Usuario: {user.email}</p>}
-      <Auth2 /> {/* LLamado del jsx que contiene el inicio de sesion*/}
-      {/*<Auth />*/} {/* LLamado del jsx que contiene el formulario de registro*/}
-    </div>
-  );
+class LoginC extends Component {
+  render(){
+    return (
+      <Auth2 />
+    );
+  }
 }
 
-export default App;
+export default LoginC;

@@ -1,30 +1,23 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Assets/css/App.css';
-import "firebase/auth"
-//import Auth from './Components/Auth'; // componente Auth para el registro de un nuevo usuario
-//import Auth2 from './Components/Auth2'; // componente Auth para el inicio de sesion
-//import {useUser} from 'reactfire';
+import { Switch, Route, Link } from "react-router-dom";
+import Registro from './Components/Auth';
+import Login from './Components/Auth2';
 
-import {
-  BrowserRouter as Router,
-  
-  Link
-} from "react-router-dom";
-
-
-function App() {
-
-  
-
-  return (
-    <Router>
-    <div>
-      <Link target="_top" to="/">inicio</Link>
-      <Link target="_top" to="/Registro">registro</Link>
-      <Link target="_top" to="/Login">login</Link>
-    </div>
-    </Router>
-  );
+class App extends Component {
+  render(){
+    return (
+      <div>
+        <Switch>
+          <Route path="/Registro" component={Registro}/>
+          <Route path="/Login" component={Login}/>
+        </Switch>
+          <Link target="_top" to="/">inicio</Link>
+          <Link target="_top" to="/Registro">registro</Link>
+          <Link target="_top" to="/Login">login</Link>
+      </div>
+    );
+  }
 }
 
 export default App;
