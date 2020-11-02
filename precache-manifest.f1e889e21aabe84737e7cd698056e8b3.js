@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9a6c36f34e774c1afa5bba38bf4a578c",
+    "revision": "e80e27f2b1772821e76686f0dc05f730",
     "url": "/Multiarca/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Multiarca/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "4958b05b6fa6f7800eb8",
-    "url": "/Multiarca/static/css/main.f9cf604e.chunk.css"
+    "revision": "7fda336f38626df2c656",
+    "url": "/Multiarca/static/css/main.909ee28e.chunk.css"
   },
   {
     "revision": "beea602133d8717d787c",
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Multiarca/static/js/8.1e7b649e.chunk.js"
   },
   {
-    "revision": "4958b05b6fa6f7800eb8",
-    "url": "/Multiarca/static/js/main.f0ec0b11.chunk.js"
+    "revision": "7fda336f38626df2c656",
+    "url": "/Multiarca/static/js/main.917d1793.chunk.js"
   },
   {
     "revision": "fb379764bcb8225845fa",
