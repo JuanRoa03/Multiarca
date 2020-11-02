@@ -1,0 +1,25 @@
+.borde{
+    border-top:solid 0.1rem #ffffff;
+    }
+
+
+
+.Barra{ 
+    border-radius: 1rem !important;
+    }
+    
+
+
+    .foto{
+        margin: auto;
+    }
+
+
+
+
+    .Ca{
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+    }

@@ -1,33 +1,106 @@
 import React from 'react';
-import 'firebase/auth';
-import {useFirebaseApp } from 'reactfire';
+import {StorageImage, useFirebaseApp } from 'reactfire';
 import { useState } from 'react';
+import 'firebase/firestore';
+import firebase from 'firebase';
+import TopBarC from './BarraSuperior';
+import LogoArca from '../Assets/Images/LogosARCA.png'
+import '../Assets/css/Registrarse.css'
+import { Link } from 'react-router-dom';
+import 'firebase/storage';
+import Subirarchivo from "./Subirfoto";
+import { Observable } from 'rxjs';
+import AuthLogin from '../Components/Auth2.js'
+
+
 
 const AuthRegistro = (props) => {
     const [ email, setEmail] =useState('');
     const [password, setPassword]= useState('');
     const [user, setUser]=useState('');
+    const [file,setfile]=useState('');
+/*     const DatosDeRegistro={
+        email,
+        password,
+        user,
+        
+    }
+     */
     
+
     const firebase= useFirebaseApp();
 
     const submit = async() =>{
-       await firebase.auth().createUserWithEmailAndPassword(email,password);
-       console.log(user);
+        await firebase.auth().createUserWithEmailAndPassword(email,password);
+               
+      
+      
+        firebase.storage().ref(`/FotosUsuario/${file.name}`).put(file).then(snapshot => {
+            return snapshot.ref.getDownloadURL()
+            .then(url => {
+                firebase.firestore().collection('usuarios').doc().set({
+                    usuario:user,
+                    image:url,
+                    correo:email,
+                    Pass:password
+                })
+                
+            })
+        });  
+        
     }
+
+   const handleUpload=  (event)=>
+    {
+        setfile(event.target.files[0])   
+    }
+
+
 
     return(
         <div>
-            <div className="jumbotron mt-2 " >
-                <label htmlFor="email"> Correo electronico</label>
-                <input type="email" id ="email" onChange={ (event)=> setEmail(event.target.value)} />
-
-                <label htmlFor="password"> Contraseña</label>
-                <input type="password" id="password" onChange={(event)=>setPassword(event.target.value)}/>
-
-                <label htmlFor="user">Usuario</label>
-                <input type="user" id ="user" onChange={(event)=>setUser(event.target.value)}/>
-
-                <button onClick={submit} > Registro</button>
+            <TopBarC/>
+            <div className="container col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-5 mt-5 pt-5">
+                <div className="row">
+                    <div className="col text-center">
+                        <div className="col mt-5 ">
+                            <img src={LogoArca} className="img-fluid " alt="Logo MultiArca" width = "100rem"/>
+                            <h1 className="h3 mt-3 font-weight-normal text-light">REGISTRO</h1>
+                        </div>
+                        <div className="col mt-4">
+                            <div className="form-group-lg">
+                                <input type="text"  className="form-control Barra" placeholder="Nombre de usuario" onChange={(event)=>setUser(event.target.value)}/>
+                            </div>
+                        </div>
+                        <div className="col mt-2">
+                            <div className="form-group-lg">
+                                <input type="email" className="form-control Barra" placeholder="Correo" onChange={(event)=> setEmail(event.target.value)}/>
+                            </div>
+                        </div>
+                        <div className="col-sm mt-2">
+                            <div className="form-group-lg">
+                                <input type="password" className="form-control Barra" placeholder="Contraseña" onChange={(event)=>setPassword(event.target.value)}/>
+                            </div>
+                        </div>
+                        <div className="col-sm mt-2">
+                            <div className="form-group-lg">
+                                <input type="password" className="form-control Barra" placeholder="Confirmar Contraseña"/>
+                            </div>
+                        </div>
+                        <div className="col-sm mt-2">
+                            <div className="borde"></div>
+                        </div>
+                        <div className="col-sm mt-2">
+                            <Link to="/Login"> <button onClick={submit} className="btn btn-lg btn-success btn-block Barra" type="submit">Registrar</button> </Link>
+                        </div>
+                        <div>
+                            <Subirarchivo onUpload={handleUpload}/>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

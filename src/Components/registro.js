@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Auth from './Auth'; // componente Auth para el registro de un nuevo usuario
+import Auth from './Auth';
 
 class RegistroC extends Component {
   render(){
     return (
-      <Auth />
+      <Auth/>
     );
   }
 }
