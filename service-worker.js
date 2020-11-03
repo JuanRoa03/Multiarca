@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Multiarca/precache-manifest.be80e332d9649fcafa66cef4aa05fe4e.js"
+  "/Multiarca/precache-manifest.89c7695dcba0819dd52f8e73bda9dcd5.js"
 );
 
 self.addEventListener('message', (event) => {

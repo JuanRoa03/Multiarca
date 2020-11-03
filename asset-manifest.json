@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Multiarca/static/css/main.909ee28e.chunk.css",
-    "main.js": "/Multiarca/static/js/main.09444b23.chunk.js",
-    "main.js.map": "/Multiarca/static/js/main.09444b23.chunk.js.map",
+    "main.js": "/Multiarca/static/js/main.d7b86aae.chunk.js",
+    "main.js.map": "/Multiarca/static/js/main.d7b86aae.chunk.js.map",
     "runtime-main.js": "/Multiarca/static/js/runtime-main.6f884ae0.js",
     "runtime-main.js.map": "/Multiarca/static/js/runtime-main.6f884ae0.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/Multiarca/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.d0d953b9.chunk.js": "/Multiarca/static/js/2.d0d953b9.chunk.js",
-    "static/js/2.d0d953b9.chunk.js.map": "/Multiarca/static/js/2.d0d953b9.chunk.js.map",
+    "static/js/2.eb7304ae.chunk.js": "/Multiarca/static/js/2.eb7304ae.chunk.js",
+    "static/js/2.eb7304ae.chunk.js.map": "/Multiarca/static/js/2.eb7304ae.chunk.js.map",
     "static/js/3.a544f182.chunk.js": "/Multiarca/static/js/3.a544f182.chunk.js",
     "static/js/3.a544f182.chunk.js.map": "/Multiarca/static/js/3.a544f182.chunk.js.map",
     "static/js/4.27c867e4.chunk.js": "/Multiarca/static/js/4.27c867e4.chunk.js",
@@ -21,11 +21,11 @@
     "static/js/8.ba7a3428.chunk.js": "/Multiarca/static/js/8.ba7a3428.chunk.js",
     "static/js/8.ba7a3428.chunk.js.map": "/Multiarca/static/js/8.ba7a3428.chunk.js.map",
     "index.html": "/Multiarca/index.html",
-    "precache-manifest.be80e332d9649fcafa66cef4aa05fe4e.js": "/Multiarca/precache-manifest.be80e332d9649fcafa66cef4aa05fe4e.js",
+    "precache-manifest.89c7695dcba0819dd52f8e73bda9dcd5.js": "/Multiarca/precache-manifest.89c7695dcba0819dd52f8e73bda9dcd5.js",
     "service-worker.js": "/Multiarca/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/Multiarca/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.909ee28e.chunk.css.map": "/Multiarca/static/css/main.909ee28e.chunk.css.map",
-    "static/js/2.d0d953b9.chunk.js.LICENSE.txt": "/Multiarca/static/js/2.d0d953b9.chunk.js.LICENSE.txt",
+    "static/js/2.eb7304ae.chunk.js.LICENSE.txt": "/Multiarca/static/js/2.eb7304ae.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Multiarca/static/media/FONDOGENERAL.e889a5bd.png",
     "static/media/LogosARCA.png": "/Multiarca/static/media/LogosARCA.bba9ec29.png",
     "static/media/dino.jpg": "/Multiarca/static/media/dino.18f75b6e.jpg",
@@ -35,8 +35,8 @@
   "entrypoints": [
     "static/js/runtime-main.6f884ae0.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.d0d953b9.chunk.js",
+    "static/js/2.eb7304ae.chunk.js",
     "static/css/main.909ee28e.chunk.css",
-    "static/js/main.09444b23.chunk.js"
+    "static/js/main.d7b86aae.chunk.js"
   ]
 }
