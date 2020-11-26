@@ -32,28 +32,24 @@ const InicioC =(props)=>{
                         <div className="col mt-3">
                             <div className="form-group-lg">
                                 <Link to="/registro">
-                                    <button  className="btn btn-lg btn-block bg-success text-light Barra" type="submit"> Registrate </button>
+                                    <button  className="btn btn-lg btn-block bg-success text-light Barra" type="submit"> Regístrate </button>
                                 </Link>
                             </div>
                         </div>
-                        <div class="col-sm mt-3">
-                            <div className="form-group">
-                                <input type="email" className="form-control Barra" placeholder="Buscar" />
-                            </div>
-                        </div>
+
                         <div className="col mt-4 ">
                             <img src={LogoArca} className="img-fluid " alt="Logo MultiArca" width = "100rem"/>
                         </div>
                         <div class="col mt-2 text-white">
-                            <h1>Que es Multiarca</h1>
+                            <h1>Qué es Multiarca</h1>
                             <p>Plataforma para estudiantes
                                 universitarios o egresados
                                 que quieran compartir con
                                 los demás sus trabajos o que
                                 simplemente quieren tener
                                 un portafolio virtual de estos.</p>
-                            <h2>Quienes somos</h2>
-                            <p>David Rodriguez Savedra</p>
+                            <h2>Quiénes somos</h2>
+                            <p>David Rodríguez Savedra</p>
                             <p>Juan Calderon Jimenez</p>
                             <p>Juan Jose Roa Solano</p>
                             <p>Victor Manuel Salcedo</p>

@@ -8,7 +8,6 @@ import { FirebaseAppProvider } from 'reactfire';
 import firebaseConfig from './utils/firebase';
 import { BrowserRouter } from "react-router-dom";
 
-
 ReactDOM.render(
   <FirebaseAppProvider firebaseConfig ={firebaseConfig}>
     <Suspense fallback={'Conectando con firebase'}>

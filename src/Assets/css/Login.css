@@ -14,12 +14,9 @@
         margin: auto;
     }
 
+    img.fotoperfil {
+        border-radius: 100%;
+        width: 65px;
+        height: 65px;
+      }
 
-
-
-    .Ca{
-        display: flex;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-        padding: 20px;
-    }

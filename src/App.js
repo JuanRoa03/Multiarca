@@ -5,6 +5,9 @@ import Registro from './Components/Auth';
 import Login from './Components/Auth2';
 import Inicio from './Components/inicio';
 import Puser from './Components/Puser';
+import Strabajo from './Components/Strabajo';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class App extends Component {
 
@@ -24,8 +27,11 @@ class App extends Component {
           <Route path="/Login" component={Login}/>
           <Route path="/Perfil" component={Puser}/>
           
+          <Route path="/Strabajo" component={Strabajo}/>
+          
+          
         </Switch>
-
+        <ToastContainer/>
 
         {/* borrar despues  */}
 

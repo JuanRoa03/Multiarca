@@ -1,16 +1,17 @@
 import React from 'react';
-import {StorageImage, useFirebaseApp } from 'reactfire';
+import {useFirebaseApp } from 'reactfire';
 import { useState } from 'react';
 import 'firebase/firestore';
-import firebase from 'firebase';
 import TopBarC from './BarraSuperior';
 import LogoArca from '../Assets/Images/LogosARCA.png'
 import '../Assets/css/Registrarse.css'
 import { Link } from 'react-router-dom';
 import 'firebase/storage';
 import Subirarchivo from "./Subirfoto";
-import { Observable } from 'rxjs';
-import AuthLogin from '../Components/Auth2.js'
+import {toast} from 'react-toastify';
+
+
+
 
 
 
@@ -43,11 +44,14 @@ const AuthRegistro = (props) => {
                     image:url,
                     correo:email,
                     Pass:password
+
                 })
                 
             })
-        });  
-        
+        });
+        toast('Nuevo usuario creado',{
+            type: 'success'
+        })
     }
 
    const handleUpload=  (event)=>
@@ -87,18 +91,19 @@ const AuthRegistro = (props) => {
                                 <input type="password" className="form-control Barra" placeholder="Confirmar Contraseña"/>
                             </div>
                         </div>
+                        <div className="form-group-lg mt-2">
+                            <Subirarchivo onUpload={handleUpload}/>
+                        </div>
+
+
+
                         <div className="col-sm mt-2">
                             <div className="borde"></div>
                         </div>
                         <div className="col-sm mt-2">
                             <Link to="/Login"> <button onClick={submit} className="btn btn-lg btn-success btn-block Barra" type="submit">Registrar</button> </Link>
                         </div>
-                        <div>
-                            <Subirarchivo onUpload={handleUpload}/>
-                            
-                            
-                            
-                        </div>
+                        
                     </div>
                 </div>
             </div>

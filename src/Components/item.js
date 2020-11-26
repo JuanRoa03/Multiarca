@@ -1,40 +1,77 @@
 import React, {Component} from 'react';
-import Spa from '../Assets/Images/spark.jpg';
-import si from '../Assets/Images/dino.jpg';
-import pi from '../Assets/Images/tu_yo_s.jpg';
+
+import {useFirebaseApp,useUser} from 'reactfire';
 import Carta from './carta';
+import 'firebase/auth';
+import 'firebase/firestore';
 
-function Exportar(){
+import { useState,useEffect } from 'react';
 
-const imagenes =[
+
+
+
+
+
+const AuthLogin = (props) => {
+
+
+
+    const firebase= useFirebaseApp();
+    const [datos, setDatos] = useState([])
+
+
+
+    useEffect(()=>{
+
+        
+        firebase.firestore().collection('Trabajo_Usuarios').onSnapshot((snapshot) => {
+            const NuevosDatos = snapshot.docs.map((doc) =>({
+                id: doc.id,
+                ...doc.data()
+                
+            }))
+            /*   console.log(NuevosDatos) */
+              
+            setDatos(NuevosDatos)
+        })
+    },[])
+
+/* const imagenes =[
 {img: Spa, id: "a1"},
 {img: si, id: "a2"},
 {img: pi, id: "a3"}
 
-
-
-]
+] */
 
 
 return (
-    <div>
-        {
-            imagenes.map((p) => 
-            <Carta 
-            image={p.img}
-            iden={p.id}
+    <div className="row">
+        {datos.map((d)=> 
+        <Carta admin2={props.admin}
 
 
-            />)
-            }
+        img={d.image}
+        nombre={d.Title}
+        iden={d.id}
+        Desc={d.Descripcion}
+        Cate1={d.categoria}
+
+        Cate2={d.categoria_2}
+                     
+                  />  )}
+
+
     </div>
+
+
+
 );
 
 
 
 
 } 
-export default Exportar;
+export default AuthLogin;
 
 
 /* 

@@ -16,4 +16,4 @@ function Lista(props){
     );
 
 }
-export default Lista;
+export default Lista;/* no sirve */
